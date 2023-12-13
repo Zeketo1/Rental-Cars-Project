@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <!-- <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        /> -->
+        <script
+            src="https://kit.fontawesome.com/f74f1785d8.js"
+            crossorigin="anonymous"
+        ></script>
+        <link
+            href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+            rel="stylesheet"
+        />
+        <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateInit"></script>
+        <title>SP</title>
+    </head>
+    <body>
+        <div class="body">
+            <div class="header">
+                <h3 class="limes-icon">LIMES</h3>
+                <div class="header-option-container1">
+                    <div class="header-options">Home</div>
+                    <div class="header-options">Vehicles</div>
+                    <div class="header-options">Blog</div>
+                    <div class="header-options">Contacts</div>
+                </div>
+                <div class="header-option-container2">
+                    <!-- <div class="header-options2 header-btn">
+                        <img
+                            src="../SP-images/flag.png"
+                            height="25"
+                            width="25"
+                            style="margin-right: 5px"
+                        />
+                        <p>ENG</p>
+                    </div> -->
+                    <div id="google_translate_element"></div>
+                    <div class="dropdown">
+                        <img
+                            onclick="toggleDropdown()"
+                            src="../SP-images/Nav-icon2.png"
+                            class="dropbtn"
+                        />
+                        <div id="myDropdown1" class="dropdown-content">
+                            <a href="#">Home</a>
+                            <a href="#">Vehicles</a>
+                            <a href="#">Blog</a>
+                            <a href="#">Contacts</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="first-image">
+                <div class="first-text-container">
+                    <div class="first-text">Luxury Limo Hire</div>
+                    <p class="first-text2">
+                        We offer professional car rental & limousine services in
+                        our range of high-end vehicles
+                    </p>
+                </div>
+                <button class="first-btn">Open Fleet</button>
+                <div class="tab-container">
+                    <div id="tabContainer">
+                        <div class="tab active" onclick="openTab('Tab1')">
+                            Distance
+                        </div>
+                        <div class="tab" onclick="openTab('Tab2')">Hourly</div>
+                        <div class="tab" onclick="openTab('Tab3')">
+                            Flat Rate
+                        </div>
+                    </div>
+
+                    <div id="Tab1" class="tabContent">
+                        <input
+                            class="first-input"
+                            type="text"
+                            placeholder="Pick Up Address"
+                        />
+                        <input
+                            class="first-input"
+                            type="text"
+                            placeholder="Drop Off Address"
+                        />
+                        <input
+                            class="first-input first-input2"
+                            type="text"
+                            placeholder="One Way"
+                        />
+                        <input
+                            class="first-input first-input2 first-input3"
+                            type="date"
+                        />
+                        <div class="pick-up">Pick Up Time</div>
+                        <select id="myDropdown">
+                            <option value="00">00</option>
+                            <option value="00">05</option>
+                            <option value="00">10</option>
+                            <option value="00">15</option>
+                            <option value="00">20</option>
+                            <option value="00">25</option>
+                            <option value="00">30</option>
+                        </select>
+                        <select id="myDropdown2">
+                            <option value="00">01</option>
+                            <option value="00">02</option>
+                            <option value="00">03</option>
+                            <option value="00">04</option>
+                            <option value="00">05</option>
+                            <option value="00">06</option>
+                            <option value="00">07</option>
+                            <option value="00">08</option>
+                            <option value="00">09</option>
+                            <option value="00">10</option>
+                            <option value="00">11</option>
+                            <option value="00">12</option>
+                        </select>
+                        <button class="second-btn">Reserve Now</button>
+                    </div>
+
+                    <div id="Tab2" class="tabContent">
+                        <input
+                            class="first-input"
+                            type="text"
+                            placeholder="Pick Up Address"
+                        />
+                        <input
+                            class="first-input"
+                            type="text"
+                            placeholder="Drop Off Address"
+                        />
+                        <div class="checkout-container">
+                            <select class="first-input hourly1">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+                            <div class="first-input hourly2">
+                                <p class="hourly2-text">CHECKOUT</p>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="btn-check" onclick="calcu()">
+                                Check
+                            </button>
+                        </div>
+                        <div class="pick-up pick-up2">Pick Up Time</div>
+                        <select id="myDropdown">
+                            <option value="00">00</option>
+                            <option value="00">05</option>
+                            <option value="00">10</option>
+                            <option value="00">15</option>
+                            <option value="00">20</option>
+                            <option value="00">25</option>
+                            <option value="00">30</option>
+                        </select>
+                        <select id="myDropdown2">
+                            <option value="00">01</option>
+                            <option value="00">02</option>
+                            <option value="00">03</option>
+                            <option value="00">04</option>
+                            <option value="00">05</option>
+                            <option value="00">06</option>
+                            <option value="00">07</option>
+                            <option value="00">08</option>
+                            <option value="00">09</option>
+                            <option value="00">10</option>
+                            <option value="00">11</option>
+                            <option value="00">12</option>
+                        </select>
+                        <button class="second-btn">Reserve Now</button>
+                    </div>
+
+                    <div id="Tab3" class="tabContent">
+                        <input
+                            class="first-input"
+                            type="text"
+                            placeholder="Pick Up Address"
+                        />
+                        <input
+                            class="first-input"
+                            type="text"
+                            placeholder="Drop Off Address"
+                        />
+                        <input
+                            class="first-input first-input2"
+                            type="text"
+                            placeholder="One Way"
+                        />
+                        <input
+                            class="first-input first-input2 first-input3"
+                            type="text"
+                            placeholder="06/04/2023"
+                        />
+                        <div class="pick-up">Pick Up Time</div>
+                        <select id="myDropdown">
+                            <option value="00">00</option>
+                            <option value="00">05</option>
+                            <option value="00">10</option>
+                            <option value="00">15</option>
+                            <option value="00">20</option>
+                            <option value="00">25</option>
+                            <option value="00">30</option>
+                        </select>
+                        <select id="myDropdown2">
+                            <option value="00">01</option>
+                            <option value="00">02</option>
+                            <option value="00">03</option>
+                            <option value="00">04</option>
+                            <option value="00">05</option>
+                            <option value="00">06</option>
+                            <option value="00">07</option>
+                            <option value="00">08</option>
+                            <option value="00">09</option>
+                            <option value="00">10</option>
+                            <option value="00">11</option>
+                            <option value="00">12</option>
+                        </select>
+                        <button class="second-btn">Reserve Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="services">
+                    <div class="services-header-container services-header1">
+                        <h1 class="services-header">Services</h1>
+                        <p class="services-header2">
+                            We invite you to try our services, and we personally
+                            guarantee that you will be completely satified.
+                        </p>
+                    </div>
+                    <div class="services-option-container">
+                        <div class="services-option-container2">
+                            <div class="services-options" data-aos="fade-right">
+                                <div class="services-images"></div>
+                                <div class="services-text">
+                                    <h3>Airport Transfers</h3>
+                                    <p
+                                        class="services-options-text services-options-text1"
+                                    >
+                                        With additional wait time and flight
+                                        tracking in case of delays, our service
+                                        is optimized to make every airport
+                                        transfer a breeze.
+                                    </p>
+                                    <div class="services-read-more-btn">
+                                        Read More
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="services-options" data-aos="fade-left">
+                                <div
+                                    class="services-images services-images2"
+                                ></div>
+                                <div class="services-text">
+                                    <h3>Intercity trips</h3>
+                                    <p
+                                        class="services-options-text services-options-text2"
+                                    >
+                                        Your stressfree solution for traveling
+                                        between cities with chauffeurs all over
+                                        the world.
+                                    </p>
+                                    <div class="services-read-more-btn">
+                                        Read More
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="services-options services-options-up"
+                                data-aos="fade-right"
+                            >
+                                <div
+                                    class="services-images services-images3"
+                                ></div>
+                                <div class="services-text">
+                                    <h3>Wedding events</h3>
+                                    <p
+                                        class="services-options-text services-options-text3"
+                                    >
+                                        Our friendly, and attentive service
+                                        combined with thorough attention to
+                                        detail ensure you can truly relax and
+                                        enjoy your special day.
+                                    </p>
+                                    <div class="services-read-more-btn">
+                                        Read More
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="services-options services-options-up"
+                                data-aos="fade-left"
+                            >
+                                <div
+                                    class="services-images services-images4"
+                                ></div>
+                                <div class="services-text">
+                                    <h3>Business Meeting</h3>
+                                    <p
+                                        class="services-options-text services-options-text1"
+                                    >
+                                        Focus on your meeting with your
+                                        partners, forget about the road and the
+                                        car, which will distract your thoughts.
+                                    </p>
+                                    <div class="services-read-more-btn">
+                                        Read More
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="our-fleet">
+            <div class="body">
+                <div class="main">
+                    <div class="services-header-container services-header1">
+                        <h1 class="services-header">Our Fleet</h1>
+                        <p class="services-header2">
+                            We offer an extensive fleet of vehicles including
+                            sedans, limousines and crossovers
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="fleet-container">
+                <div id="fleetContainer">
+                    <div class="fleet active" onclick="fleetTab('fleet1')">
+                        All
+                    </div>
+                    <div class="fleet" onclick="fleetTab('fleet2')">Luxury</div>
+                    <div class="fleet" onclick="fleetTab('fleet3')">
+                        Business
+                    </div>
+                    <div class="fleet" onclick="fleetTab('fleet4')">
+                        Crossover
+                    </div>
+                </div>
+                <div id="fleet1" class="fleetContent">
+                    <div class="car-container">
+                        <div class="cars">
+                            <img
+                                class="car-images"
+                                src="../SP-images/car-image1.png"
+                            />
+                        </div>
+                        <div class="car-text">Mersedes-Benz S Class</div>
+                        <div class="icons-conatiner">
+                            <div class="person-icon-container">
+                                <img
+                                    class="person-icon"
+                                    src="../SP-images/user2.png"
+                                />
+                                <p class="icon-num">2</p>
+                            </div>
+                            <div class="person-icon-container">
+                                <img
+                                    class="person-icon"
+                                    src="../SP-images/suitcase.png
+                                        "
+                                />
+                                <p class="icon-num">2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="car-container">
+                        <div class="cars">
+                            <img
+                                class="car-images"
+                                src="../SP-images/Mersedes Bens V Class.png"
+                            />
+                        </div>
+                        <div class="car-text">Mersedes-Benz V Class</div>
+                        <div class="icons-conatiner">
+                            <div class="person-icon-container">
+                                <img
+                                    class="person-icon"
+                                    src="../SP-images/user2.png"
+                                />
+                                <p class="icon-num">6</p>
+                            </div>
+                            <div class="person-icon-container">
+                                <img
+                                    class="person-icon"
+                                    src="../SP-images/suitcase.png
+                                        "
+                                />
+                                <p class="icon-num">4</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="car-container">
+                        <div class="cars">
+                            <img
+                                class="car-images"
+                                src="../SP-images/car-image4.png"
+                            />
+                        </div>
+                        <div class="car-text">Audi AB</div>
+                        <div class="icons-conatiner">
+                            <div class="person-icon-container">
+                                <img
+                                    class="person-icon"
+                                    src="../SP-images/user2.png"
+                                />
+                                <p class="icon-num">2</p>
+                            </div>
+                            <div class="person-icon-container">
+                                <img
+                                    class="person-icon"
+                                    src="../SP-images/suitcase.png
+                                        "
+                                />
+                                <p class="icon-num">2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="car-container">
+                        <div class="cars">
+                            <img
+                                class="car-images"
+                                src="../SP-images/car-image5.png"
+                            />
+                        </div>
+                        <div class="car-text">Rolls-Royce Phantom</div>
+                        <div class="icons-conatiner">
+                            <div class="person-icon-container">
+                                <img
+                                    class="person-icon"
+                                    src="../SP-images/user2.png"
+                                />
+                                <p class="icon-num">4</p>
+                            </div>
+                            <div class="person-icon-container">
+                                <img
+                                    class="person-icon"
+                                    src="../SP-images/suitcase.png
+                                        "
+                                />
+                                <p class="icon-num">2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="car-container">
+                        <div class="cars">
+                            <img
+                                class="car-images"
+                                src="../SP-images/mercedes maybach.png"
+                            />
+                        </div>
+                        <div class="car-text">Mercedes-Maybach S class</div>
+                        <div class="icons-conatiner">
+                            <div class="person-icon-container">
+                                <img
+                                    class="person-icon"
+                                    src="../SP-images/user2.png"
+                                />
+                                <p class="icon-num">2</p>
+                            </div>
+                            <div class="person-icon-container">
+                                <img
+                                    class="person-icon"
+                                    src="../SP-images/suitcase.png"
+                                />
+                                <p class="icon-num">2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="car-container">
+                        <div class="cars">
+                            <img
+                                class="car-images"
+                                src="../SP-images/MERCEDES-BENZ C-Class-2021.png"
+                            />
+                        </div>
+                        <div class="car-text">Mersedes-Benz C Class</div>
+                        <div class="icons-conatiner">
+                            <div class="person-icon-container">
+                                <img
+                                    class="person-icon"
+                                    src="../SP-images/user2.png"
+                                />
+                                <p class="icon-num">2</p>
+                            </div>
+                            <div class="person-icon-container">
+                                <img
+                                    class="person-icon"
+                                    src="../SP-images/suitcase.png
+                                        "
+                                />
+                                <p class="icon-num">2</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="fleet2" class="fleetContent">
+                    <div class="car-container">
+                        <div class="cars">
+                            <img
+                                class="car-images"
+                                src="../SP-images/mercedes maybach.png"
+                            />
+                        </div>
+                        <div class="car-text">Mercedes-Maybach S class</div>
+                        <div class="icons-conatiner">
+                            <div class="person-icon-container">
+                                <img
+                                    class="person-icon"
+                                    src="../SP-images/user2.png"
+                                />
+                                <p class="icon-num">2</p>
+                            </div>
+                            <div class="person-icon-container">
+                                <img
+                                    class="person-icon"
+                                    src="../SP-images/suitcase.png
+                                        "
+                                />
+                                <p class="icon-num">2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="car-container">
+                        <div class="cars">
+                            <img
+                                class="car-images"
+                                src="../SP-images/car-image1.png"
+                            />
+                        </div>
+                        <div class="car-text">Mersedes-Benz S Class</div>
+                        <div class="icons-conatiner">
+                            <div class="person-icon-container">
+                                <img
+                                    class="person-icon"
+                                    src="../SP-images/user2.png"
+                                />
+                                <p class="icon-num">2</p>
+                            </div>
+                            <div class="person-icon-container">
+                                <img
+                                    class="person-icon"
+                                    src="../SP-images/suitcase.png
+                                        "
+                                />
+                                <p class="icon-num">2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="car-container">
+                        <div class="cars">
+                            <img
+                                class="car-images"
+                                src="../SP-images/Mercedes-benz vision-maybach.png"
+                            />
+                        </div>
+                        <div class="car-text">Mersedes-Benz Vision-Maybach</div>
+                        <div class="icons-conatiner">
+                            <div class="person-icon-container">
+                                <img
+                                    class="person-icon"
+                                    src="../SP-images/user2.png"
+                                />
+                                <p class="icon-num">2</p>
+                            </div>
+                            <div class="person-icon-container">
+                                <img
+                                    class="person-icon"
+                                    src="../SP-images/suitcase.png
+                                        "
+                                />
+                                <p class="icon-num">2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="car-container">
+                        <div class="cars">
+                            <img
+                                class="car-images"
+                                src="../SP-images/Mercedes-Benz_GLK.png"
+                            />
+                        </div>
+                        <div class="car-text">Mercedes-Benz_GLK 250</div>
+                        <div class="icons-conatiner">
+                            <div class="person-icon-container">
+                                <img
+                                    class="person-icon"
+                                    src="../SP-images/user2.png"
+                                />
+                                <p class="icon-num">2</p>
+                            </div>
+                            <div class="person-icon-container">
+                                <img
+                                    class="person-icon"
+                                    src="../SP-images/suitcase.png
+                                        "
+                                />
+                                <p class="icon-num">2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="car-container">
+                        <div class="cars">
+                            <img
+                                class="car-images"
+                                src="../SP-images/Mercedes-Benz-GLS-4MATIC.png"
+                            />
+                        </div>
+                        <div class="car-text">Mercedes-Benz-GLS-4MATIC</div>
+                        <div class="icons-conatiner">
+                            <div class="person-icon-container">
+                                <img
+                                    class="person-icon"
+                                    src="../SP-images/user2.png"
+                                />
+                                <p class="icon-num">2</p>
+                            </div>
+                            <div class="person-icon-container">
+                                <img
+                                    class="person-icon"
+                                    src="../SP-images/suitcase.png"
+                                />
+                                <p class="icon-num">2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="car-container">
+                        <div class="cars">
+                            <img
+                                class="car-images"
+                                src="../SP-images/Mercedes-Benz-GLS-550-4MATIC-SUV.png"
+                            />
+                        </div>
+                        <div class="car-text">Mercedes-Benz-GLS-550-4MATIC</div>
+                        <div class="icons-conatiner">
+                            <div class="person-icon-container">
+                                <img
+                                    class="person-icon"
+                                    src="../SP-images/user2.png"
+                                />
+                                <p class="icon-num">2</p>
+                            </div>
+                            <div class="person-icon-container">
+                                <img
+                                    class="person-icon"
+                                    src="../SP-images/suitcase.png
+                                        "
+                                />
+                                <p class="icon-num">2</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="fleet3" class="fleetContent">
+                    <div class="car-container">
+                        <div class="cars">
+                            <img
+                                class="car-images"
+                                src="../SP-images/honda-pilot-2023.png"
+                            />
+                        </div>
+                        <div class="car-text">Honda-Pilot</div>
+                        <div class="icons-conatiner">
+                            <div class="person-icon-container">
+                                <img
+                                    class="person-icon"
+                                    src="../SP-images/user2.png"
+                                />
+                                <p class="icon-num">3</p>
+                            </div>
+                            <div class="person-icon-container">
+                                <img
+                                    class="person-icon"
+                                    src="../SP-images/suitcase.png
+                                        "
+                                />
+                                <p class="icon-num">2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="car-container">
+                        <div class="cars">
+                            <img
+                                class="car-images"
+                                src="../SP-images/honda_passport.png"
+                            />
+                        </div>
+                        <div class="car-text">Honda-Passport 2023</div>
+                        <div class="icons-conatiner">
+                            <div class="person-icon-container">
+                                <img
+                                    class="person-icon"
+                                    src="../SP-images/user2.png"
+                                />
+                                <p class="icon-num">2</p>
+                            </div>
+                            <div class="person-icon-container">
+                                <img
+                                    class="person-icon"
+                                    src="../SP-images/suitcase.png
+                                        "
+                                />
+                                <p class="icon-num">2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="car-container">
+                        <div class="cars">
+                            <img
+                                class="car-images"
+                                src="../SP-images/Lexus-LX-600-Premium.png"
+                            />
+                        </div>
+                        <div class="car-text">Lexus-LX-600-Premium</div>
+                        <div class="icons-conatiner">
+                            <div class="person-icon-container">
+                                <img
+                                    class="person-icon"
+                                    src="../SP-images/user2.png"
+                                />
+                                <p class="icon-num">2</p>
+                            </div>
+                            <div class="person-icon-container">
+                                <img
+                                    class="person-icon"
+                                    src="../SP-images/suitcase.png
+                                        "
+                                />
+                                <p class="icon-num">2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="car-container">
+                        <div class="cars">
+                            <img
+                                class="car-images"
+                                src="../SP-images/2085_CR-V.png"
+                            />
+                        </div>
+                        <div class="car-text">Honda CR-V</div>
+                        <div class="icons-conatiner">
+                            <div class="person-icon-container">
+                                <img
+                                    class="person-icon"
+                                    src="../SP-images/user2.png"
+                                />
+                                <p class="icon-num">2</p>
+                            </div>
+                            <div class="person-icon-container">
+                                <img
+                                    class="person-icon"
+                                    src="../SP-images/suitcase.png
+                                        "
+                                />
+                                <p class="icon-num">2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="car-container">
+                        <div class="cars">
+                            <img
+                                class="car-images"
+                                src="../SP-images/2022 Lexus GX.png"
+                            />
+                        </div>
+                        <div class="car-text">Lexus GX</div>
+                        <div class="icons-conatiner">
+                            <div class="person-icon-container">
+                                <img
+                                    class="person-icon"
+                                    src="../SP-images/user2.png"
+                                />
+                                <p class="icon-num">4</p>
+                            </div>
+                            <div class="person-icon-container">
+                                <img
+                                    class="person-icon"
+                                    src="../SP-images/suitcase.png"
+                                />
+                                <p class="icon-num">2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="car-container">
+                        <div class="cars">
+                            <img
+                                class="car-images"
+                                src="../SP-images/Mercedes-Benz GLE.png"
+                            />
+                        </div>
+                        <div class="car-text">Mercedes-Benz GLE</div>
+                        <div class="icons-conatiner">
+                            <div class="person-icon-container">
+                                <img
+                                    class="person-icon"
+                                    src="../SP-images/user2.png"
+                                />
+                                <p class="icon-num">2</p>
+                            </div>
+                            <div class="person-icon-container">
+                                <img
+                                    class="person-icon"
+                                    src="../SP-images/suitcase.png
+                                        "
+                                />
+                                <p class="icon-num">2</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="fleet4" class="fleetContent">
+                    <div class="car-container">
+                        <div class="cars">
+                            <img
+                                class="car-images"
+                                src="../SP-images/BMW X7.png"
+                            />
+                        </div>
+                        <div class="car-text">BMW X7</div>
+                        <div class="icons-conatiner">
+                            <div class="person-icon-container">
+                                <img
+                                    class="person-icon"
+                                    src="../SP-images/user2.png"
+                                />
+                                <p class="icon-num">4</p>
+                            </div>
+                            <div class="person-icon-container">
+                                <img
+                                    class="person-icon"
+                                    src="../SP-images/suitcase.png
+                                        "
+                                />
+                                <p class="icon-num">2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="car-container">
+                        <div class="cars">
+                            <img
+                                class="car-images"
+                                src="../SP-images/BMW XM.png"
+                            />
+                        </div>
+                        <div class="car-text">BMW XM</div>
+                        <div class="icons-conatiner">
+                            <div class="person-icon-container">
+                                <img
+                                    class="person-icon"
+                                    src="../SP-images/user2.png"
+                                />
+                                <p class="icon-num">2</p>
+                            </div>
+                            <div class="person-icon-container">
+                                <img
+                                    class="person-icon"
+                                    src="../SP-images/suitcase.png
+                                        "
+                                />
+                                <p class="icon-num">2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="car-container">
+                        <div class="cars">
+                            <img
+                                class="car-images"
+                                src="../SP-images/Jeep Avenger.png"
+                            />
+                        </div>
+                        <div class="car-text">Jeep Avenger</div>
+                        <div class="icons-conatiner">
+                            <div class="person-icon-container">
+                                <img
+                                    class="person-icon"
+                                    src="../SP-images/user2.png"
+                                />
+                                <p class="icon-num">2</p>
+                            </div>
+                            <div class="person-icon-container">
+                                <img
+                                    class="person-icon"
+                                    src="../SP-images/suitcase.png
+                                        "
+                                />
+                                <p class="icon-num">2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="car-container">
+                        <div class="cars">
+                            <img
+                                class="car-images"
+                                src="../SP-images/Bollinger B1.png"
+                            />
+                        </div>
+                        <div class="car-text">Bollinger B1</div>
+                        <div class="icons-conatiner">
+                            <div class="person-icon-container">
+                                <img
+                                    class="person-icon"
+                                    src="../SP-images/user2.png"
+                                />
+                                <p class="icon-num">2</p>
+                            </div>
+                            <div class="person-icon-container">
+                                <img
+                                    class="person-icon"
+                                    src="../SP-images/suitcase.png
+                                        "
+                                />
+                                <p class="icon-num">2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="car-container">
+                        <div class="cars">
+                            <img
+                                class="car-images"
+                                src="../SP-images/Audi Q8.png"
+                            />
+                        </div>
+                        <div class="car-text">Audi Q8</div>
+                        <div class="icons-conatiner">
+                            <div class="person-icon-container">
+                                <img
+                                    class="person-icon"
+                                    src="../SP-images/user2.png"
+                                />
+                                <p class="icon-num">2</p>
+                            </div>
+                            <div class="person-icon-container">
+                                <img
+                                    class="person-icon"
+                                    src="../SP-images/suitcase.png"
+                                />
+                                <p class="icon-num">2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="car-container">
+                        <div class="cars">
+                            <img
+                                class="car-images"
+                                src="../SP-images/Tesla Model X.png"
+                            />
+                        </div>
+                        <div class="car-text">Tesla Model X</div>
+                        <div class="icons-conatiner">
+                            <div class="person-icon-container">
+                                <img
+                                    class="person-icon"
+                                    src="../SP-images/user2.png"
+                                />
+                                <p class="icon-num">2</p>
+                            </div>
+                            <div class="person-icon-container">
+                                <img
+                                    class="person-icon"
+                                    src="../SP-images/suitcase.png
+                                        "
+                                />
+                                <p class="icon-num">2</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="body">
+            <div class="main">
+                <div class="choose-us">
+                    <div class="choose-us-header-container">
+                        <h1 class="services-header choose-header">
+                            Why Choose Us
+                        </h1>
+                        <p class="choose-us-header2">
+                            At LIMOS we pride ourselves in delivering extensive
+                            services to fulfill all of your needs with first
+                            rate customer care
+                        </p>
+                    </div>
+                    <div class="choose-us-container" data-aos="fade-right">
+                        <div class="choose-us-images-container">
+                            <div class="choose-us-images choose-us-images2">
+                                <img src="../SP-images/booking (1).png" />
+                            </div>
+                            <div class="choose-us-text">
+                                <h3 class="choose-us-header-text">
+                                    Easy Online Booking
+                                </h3>
+                                <p class="choose-us-details">
+                                    Effortlessly reserve your ideal ride with
+                                    just a few clicks.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="choose-us-images-container">
+                            <div class="choose-us-images">
+                                <img src="../SP-images/driver.png" />
+                            </div>
+                            <div class="choose-us-text">
+                                <h3 class="choose-us-header-text">
+                                    Professional Drivers
+                                </h3>
+                                <p class="choose-us-details">
+                                    Reliable chauffeurs ensuring a safe, smooth
+                                    ride for your convenience.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="choose-us-images-container">
+                            <div class="choose-us-images choose-us-images2">
+                                <img src="../SP-images/car-wash.png" />
+                            </div>
+                            <div class="choose-us-text">
+                                <h3 class="choose-us-header-text">
+                                    Variety of Cars Brands
+                                </h3>
+                                <p class="choose-us-details">
+                                    Explore a diverse selection of top car
+                                    brands for every need.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="choose-us-images-container">
+                            <div class="choose-us-images">
+                                <img src="../SP-images/cashless-payment.png" />
+                            </div>
+                            <div class="choose-us-text">
+                                <h3 class="choose-us-header-text">
+                                    Online Payment
+                                </h3>
+                                <p class="choose-us-details">
+                                    Securely pay for your reservation online
+                                    with ease and confidence.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="only-today">
+                    <div class="only-today-header">
+                        <h1 class="services-header">Only today $75/day</h1>
+                        <p class="services-header2 only-today-header2">
+                            Take advantage of our hot offers, saving a
+                            significant amount when renting a limousine
+                        </p>
+                    </div>
+                    <div class="only-today-details" data-aos="slide-up">
+                        <div class="last-car-image-details-container">
+                            <div class="last-car-image-details">
+                                Cadillac Escalade
+                            </div>
+                            <div class="last-car-image-details2">
+                                <ul class="unordered-list">
+                                    <li>For Upto 8 Passengers</li>
+                                    <li>Incredible Sound System</li>
+                                    <li>Fiber Optic Lights</li>
+                                    <li>Bars Area With Fridge</li>
+                                </ul>
+                                <ul>
+                                    <li>Tinted Windows</li>
+                                    <li>Divider With Premium Style</li>
+                                    <li>Multiporpose Designed Limo</li>
+                                    <li>Chill Air Conditioning</li>
+                                </ul>
+                            </div>
+                            <div class="reserve-btn">Reserve Now</div>
+                        </div>
+                        <div class="last-img-container">
+                            <img
+                                class="last-car-image"
+                                src="../SP-images/last-car-image3.png"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="footer-options">
+                    <div class="footer-first">
+                        <h3 class="title">LIMES</h3>
+                        <p class="sub-text sub-color">
+                            Subscribe to the newsletter
+                        </p>
+                        <div class="input-container">
+                            <input
+                                type="text"
+                                class="footer-input"
+                                placeholder="Email ..."
+                            />
+                            <div class="icon-container">
+                                <i class="fa fa-arrow-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-details-container">
+                        <div class="footer-details">
+                            <div class="city-container">
+                                <div class="cities">
+                                    <h3 class="footer-details-header">
+                                        Top cities
+                                    </h3>
+                                    <p class="text-style footer-details-text">
+                                        New York
+                                    </p>
+                                    <p class="text-style footer-details-text">
+                                        London
+                                    </p>
+                                    <p class="text-style footer-details-text">
+                                        Berlin
+                                    </p>
+                                    <p class="text-style footer-details-text">
+                                        Los Angeles
+                                    </p>
+                                    <p class="text-style footer-details-text">
+                                        Paris
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-details">
+                            <div class="city-container">
+                                <div class="cities">
+                                    <h3 class="footer-details-header">
+                                        Explore
+                                    </h3>
+                                    <p class="text-style footer-details-text">
+                                        Intercity rides
+                                    </p>
+                                    <p class="text-style footer-details-text">
+                                        Limousine service
+                                    </p>
+                                    <p class="text-style footer-details-text">
+                                        Chauffeur service
+                                    </p>
+                                    <p class="text-style footer-details-text">
+                                        Private car service
+                                    </p>
+                                    <p class="text-style footer-details-text">
+                                        Aiport transfer
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-details">
+                            <div class="city-container">
+                                <div class="cities">
+                                    <h3 class="footer-details-header">
+                                        Intercity rides
+                                    </h3>
+                                    <p class="text-style footer-details-text">
+                                        East Hampton - New York
+                                    </p>
+                                    <p class="text-style footer-details-text">
+                                        New York - Washington
+                                    </p>
+                                    <p class="text-style footer-details-text">
+                                        New York - Philadelphia
+                                    </p>
+                                    <p class="text-style footer-details-text">
+                                        Abu Dhabi - Dubai
+                                    </p>
+                                    <p class="text-style footer-details-text">
+                                        London - Birmingham
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="policy">
+                        <div class="last-date">@2023 LIMOS</div>
+                        <div class="policy-icon">
+                            <div class="policy-container">
+                                <div class="text-style policy-info">Terms</div>
+                                <div class="text-style policy-info">
+                                    Privacy policy
+                                </div>
+                                <div class="text-style policy-info">
+                                    Legal notice
+                                </div>
+                                <div
+                                    class="text-style policy-info policy-info4"
+                                >
+                                    Accessibility
+                                </div>
+                            </div>
+                            <div class="bottom-icons">
+                                <i class="fa fa-youtube icon"></i>
+                                <i class="fa fa-facebook icon"></i>
+                                <i class="fa fa-twitter icon"></i>
+                                <i class="fa fa-instagram icon"></i>
+                                <i class="fa fa-reddit icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
