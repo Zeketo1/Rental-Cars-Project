@@ -1095,7 +1095,8 @@ li::before {
     .services-options {
         display: flex;
         flex-direction: column;
-        width: 100%;
+        /* width: 100%; */
+        width: 350px;
         align-items: center;
         height: fit-content;
         padding: 15px;
