@@ -1101,6 +1101,7 @@ li::before {
         padding: 15px;
         background-color: #f4f4f4;
         border-radius: 15px;
+        overflow-x: hidden;
     }
 
     .choose-us-header-container {
