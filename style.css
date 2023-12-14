@@ -48,6 +48,10 @@ body {
     cursor: pointer;
 }
 
+.header-options:hover {
+    text-decoration: underline;
+}
+
 .header-options2 {
     padding: 0 10px;
     cursor: pointer;
