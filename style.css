@@ -14,6 +14,18 @@ body {
     padding: 0 50px;
 }
 
+.limes-icon {
+    width: 75px;
+    height: 30px;
+    transform: translateY(-3px);
+}
+
+.limes-icon2 {
+    width: 150px;
+    height: 70px;
+    transform: translateX(-32px);
+}
+
 .main {
     padding: 0 50px;
 }
@@ -852,7 +864,15 @@ li::before {
     }
 
     .limes-icon {
+        width: 70px;
+        height: 30px;
         transform: translateY(-3px);
+    }
+
+    .limes-icon2 {
+        width: 150px;
+        height: 70px;
+        transform: translateX(-32px);
     }
 
     .header {
