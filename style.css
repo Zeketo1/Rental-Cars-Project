@@ -1308,3 +1308,9 @@ li::before {
         display: none;
     } */
 }
+
+@media screen and (max-width: 370px) {
+    .hourly2-text {
+        font-size: 13px;
+    }
+}
