@@ -858,7 +858,7 @@ li::before {
     color: rgba(255, 255, 255, 0.43);
 }
 
-@media screen and (max-width: 930px) {
+@media screen and (max-width: 500px) {
     .body {
         padding: 10px;
     }
